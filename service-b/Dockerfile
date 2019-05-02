@@ -1,7 +1,9 @@
-FROM microsoft/dotnet:1.0.1-runtime
+FROM mhart/alpine-node
 EXPOSE 80
 
 WORKDIR /app
-COPY ./bin .
+COPY package.json .
+RUN npm install
+COPY . .
 
-CMD ["dotnet", "service-b.dll"]
+CMD ["node", "server.js"]

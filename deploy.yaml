@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: service-a
-    image: $ACR_DNS/service-a:$BUILD_ID
+    image: $ACR_DNS/service-a:#{Build.BuildId}
     ports:
     - containerPort: 80
       protocol: TCP
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: service-b
-        image: $ACR_DNS/service-b:$BUILD_ID
+        image: $ACR_DNS/service-b:#{Build.BuildId}
         ports:
         - containerPort: 80
           protocol: TCP

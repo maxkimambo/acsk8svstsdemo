@@ -75,6 +75,7 @@ spec:
   # label keys and values that must match in order to receive traffic for this service
   selector:
     name: service-b-pod
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service

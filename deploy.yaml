@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: service-b
-        image: kimambo.azurecr.io/service-b:#{Build.BuildId}#
+        image: kimambo.azurecr.io/service-b:38
         ports:
         - containerPort: 80
           protocol: TCP

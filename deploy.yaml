@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: service-a
-    image: kimambo.azurecr.io/service-a:#{Build.BuildId}
+    image: kimambo.azurecr.io/service-a:#{Build.BuildId}#
     ports:
     - containerPort: 80
       protocol: TCP
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: service-b
-        image: kimambo.azurecr.io/service-b:#{Build.BuildId}
+        image: kimambo.azurecr.io/service-b:#{Build.BuildId}#
         ports:
         - containerPort: 80
           protocol: TCP
